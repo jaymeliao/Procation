@@ -40,12 +40,22 @@ class ViewController: UIViewController {
     }
     
     
-    
-
-    
-    
-
-
+    @IBAction func callContact1(_ sender: UIButton) {
+        
+        callNumber(phoneNumber: "7788065724")
+        
+        
+    }
+      private func callNumber(phoneNumber:String) {
+       //"tel://\(+46706106310)"
+       if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+        let application:UIApplication = UIApplication.shared
+        if (application.canOpenURL(phoneCallURL)) {
+          application.open(phoneCallURL, options: [:], completionHandler: nil)
+        }
+       }
+      }
+  
 }
 
 extension ViewController: CLLocationManagerDelegate {

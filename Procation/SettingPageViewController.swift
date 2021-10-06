@@ -35,7 +35,7 @@ class SettingPageViewController: UIViewController, CNContactPickerDelegate {
         //0:mobile
         let phone = contact.phoneNumbers[0]
         
-        let phoneLabel = CNLabeledValue<NSString>.localizedString(forLabel: phone.label!)
+        let phoneLabel = CNLabeledValue<NSString>.localizedString(forLabel: phone.label ?? "mobilee")
         let phoneValue = phone.value.stringValue
         
         phoneLabel1.text = phoneLabel
