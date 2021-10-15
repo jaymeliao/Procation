@@ -9,6 +9,7 @@
 import UIKit
 import ContactsUI
 class SettingPageViewController: UIViewController, CNContactPickerDelegate {
+    public var mycompletionHandler: ((String?)->Void)?
 
     @IBOutlet weak var ContactName1: UILabel!
     @IBOutlet weak var phoneNum1: UILabel!
@@ -20,6 +21,10 @@ class SettingPageViewController: UIViewController, CNContactPickerDelegate {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func goBackButtonPressed(_ sender: UIButton) {
+        mycompletionHandler?(ContactName1.text)
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func selectContact1(_ sender: UIButton) {
         let contactPicker = CNContactPickerViewController()
         contactPicker.delegate = self

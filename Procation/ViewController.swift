@@ -12,6 +12,7 @@ import MapKit
 class ViewController: UIViewController {
     @IBOutlet weak var LatLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var ContactName1: UILabel!
     //attributes
     var locationManager = CLLocationManager();
     var currentLocation:CLLocation!
@@ -42,7 +43,14 @@ class ViewController: UIViewController {
     
     @IBAction func callContact1(_ sender: UIButton) {
         
-        callNumber(phoneNumber: "7788065724")
+        print("Hello")
+        let vc = storyboard?.instantiateViewController(withIdentifier: "other") as! SettingPageViewController
+       
+        vc.mycompletionHandler = { text in
+            self.ContactName1.text=text
+        }
+        present(vc,animated: true)
+        //callNumber(phoneNumber: "7788065724")
         
         
     }
