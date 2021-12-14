@@ -165,9 +165,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="htc-aN-rfv">
-                                <rect key="frame" x="0.0" y="357" width="375" height="491"/>
+                                <rect key="frame" x="0.0" y="98" width="375" height="491"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpa-nC-hhr" userLabel="ContactOneView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpa-nC-hhr" userLabel="ContactOneView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="163"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIY-lY-fHb" userLabel="Name:">
@@ -194,7 +194,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-9P-k02">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcJ-9P-k02">
                                                 <rect key="frame" x="238" y="113" width="117" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <state key="normal" title="Select Contact 1 "/>
@@ -218,7 +218,7 @@
                                             <constraint firstItem="fbM-yZ-gRM" firstAttribute="leading" secondItem="gpa-nC-hhr" secondAttribute="leading" constant="20" id="xRk-bv-sbU"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Egb-nA-ocG" userLabel="ContactTwoView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Egb-nA-ocG" userLabel="ContactTwoView">
                                         <rect key="frame" x="0.0" y="164" width="375" height="163"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QzY-XK-rwj">
@@ -239,7 +239,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yM-lG-hkR">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yM-lG-hkR">
                                                 <rect key="frame" x="236" y="113" width="119" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <state key="normal" title="Select Contact 2 "/>
@@ -270,7 +270,7 @@
                                             <constraint firstItem="pI6-Ep-elT" firstAttribute="leading" secondItem="QzY-XK-rwj" secondAttribute="trailing" constant="20" id="zcf-b7-fig"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bn2-LM-Bz8" userLabel="ContactThreeView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bn2-LM-Bz8" userLabel="ContactThreeView">
                                         <rect key="frame" x="0.0" y="328" width="375" height="163"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Iz-58-DOu">
@@ -291,7 +291,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fey-OB-AhO">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fey-OB-AhO">
                                                 <rect key="frame" x="236" y="113" width="119" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                 <state key="normal" title="Select Contact 3 "/>
@@ -324,32 +324,24 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ao-1j-p6r" userLabel="backview">
-                                <rect key="frame" x="16" y="54" width="100" height="62"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxA-D9-Eyz">
-                                        <rect key="frame" x="20" y="20" width="60" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Back" image="chevron.left.2" catalog="system">
-                                            <color key="titleColor" systemColor="linkColor"/>
-                                            <color key="titleShadowColor" systemColor="systemIndigoColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="goBackButtonPressed:" destination="6YC-4z-8c0" eventType="touchUpInside" id="jJ3-jN-EVW"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lxA-D9-Eyz">
+                                <rect key="frame" x="20" y="64" width="65.333333333333329" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back" image="arrowshape.turn.up.backward.fill" catalog="system">
+                                    <color key="titleColor" systemColor="linkColor"/>
+                                    <color key="titleShadowColor" systemColor="systemIndigoColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBackButtonPressed:" destination="6YC-4z-8c0" eventType="touchUpInside" id="jJ3-jN-EVW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="acG-ED-II7"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="1ao-1j-p6r" firstAttribute="leading" secondItem="acG-ED-II7" secondAttribute="leading" id="Yzm-eN-Lxb"/>
-                            <constraint firstItem="htc-aN-rfv" firstAttribute="trailing" secondItem="acG-ED-II7" secondAttribute="trailing" id="aCG-AB-wOe"/>
-                            <constraint firstItem="htc-aN-rfv" firstAttribute="top" secondItem="1ao-1j-p6r" secondAttribute="bottom" constant="40" id="c9u-CG-R7m"/>
-                            <constraint firstItem="htc-aN-rfv" firstAttribute="leading" secondItem="acG-ED-II7" secondAttribute="leading" id="txH-hk-V7A"/>
-                            <constraint firstItem="1ao-1j-p6r" firstAttribute="top" secondItem="acG-ED-II7" secondAttribute="top" id="x8K-04-j8u"/>
+                            <constraint firstItem="htc-aN-rfv" firstAttribute="top" secondItem="lxA-D9-Eyz" secondAttribute="bottom" constant="10" id="0eG-lk-yHr"/>
+                            <constraint firstItem="lxA-D9-Eyz" firstAttribute="leading" secondItem="acG-ED-II7" secondAttribute="leading" constant="20" id="m7A-lS-ekn"/>
+                            <constraint firstItem="lxA-D9-Eyz" firstAttribute="top" secondItem="acG-ED-II7" secondAttribute="top" constant="20" id="yTe-Uj-2JU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -364,7 +356,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.left.2" catalog="system" width="128" height="105"/>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
