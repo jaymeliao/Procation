@@ -25,11 +25,16 @@ class SettingPageViewController: UIViewController, CNContactPickerDelegate {
         mycompletionHandler?(ContactName1.text)
         dismiss(animated: true, completion: nil)
     }
+    
+    
+    
     @IBAction func selectContact1(_ sender: UIButton) {
         let contactPicker = CNContactPickerViewController()
         contactPicker.delegate = self
         self.present(contactPicker, animated: true, completion: nil)
     }
+    
+    //TODO:pass ContactName{1..3} and phoneNum{1..3} and phoneLabel1{1..3} as parameters into contactPicker
     
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         let lastName = contact.familyName

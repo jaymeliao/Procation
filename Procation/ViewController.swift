@@ -11,14 +11,18 @@ import CoreLocation
 import MapKit
 class ViewController: UIViewController {
     @IBOutlet weak var LatLabel: UILabel!
+    @IBOutlet weak var LongLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var ContactName1: UILabel!
+
     //attributes
     var locationManager = CLLocationManager();
     var currentLocation:CLLocation!
     var lock=NSLock()
     
-    
+    //Text on Contact btns
+    @IBOutlet weak var ContactBtnOneName: UIButton!
+
+    //===========================
     
     // methods
     override func viewDidLoad() {
@@ -36,25 +40,52 @@ class ViewController: UIViewController {
     
     
     @IBAction func GoToSettingButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToSetting", sender: self)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "other") as! SettingPageViewController
+       
+        vc.mycompletionHandler = { text in
+            //self.ContactName1.text=text
+            self.ContactBtnOneName.setTitle(text, for: .normal)
+        }
+        present(vc,animated: true)
+        
+        
+        
+        // performSegue(withIdentifier: "goToSetting", sender: self)
+        
+    }
+    
+    @IBAction func callContact1(_ sender: UIButton) {
+        
+
+        callNumber(phoneNumber: "7788065724")
+        
         
     }
     
     
+    
+    
+    
+    /*===================Backup start
     @IBAction func callContact1(_ sender: UIButton) {
         
         print("Hello")
         let vc = storyboard?.instantiateViewController(withIdentifier: "other") as! SettingPageViewController
        
         vc.mycompletionHandler = { text in
-            self.ContactName1.text=text
+            //self.ContactName1.text=text
+            self.ContactBtnOneName.setTitle(text, for: .normal)
         }
         present(vc,animated: true)
         //callNumber(phoneNumber: "7788065724")
         
         
     }
-      private func callNumber(phoneNumber:String) {
+    
+    
+    ===============Backup callContact1 end*/
+    
+    private func callNumber(phoneNumber:String) {
        //"tel://\(+46706106310)"
        if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
         let application:UIApplication = UIApplication.shared
@@ -62,9 +93,14 @@ class ViewController: UIViewController {
           application.open(phoneCallURL, options: [:], completionHandler: nil)
         }
        }
-      }
+    }
   
 }
+
+
+
+
+
 
 extension ViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -75,7 +111,8 @@ extension ViewController: CLLocationManagerDelegate {
             print("==============dd=======")
             print("Lat: \(currentLocation.coordinate.latitude)")
             print(currentLocation.coordinate.longitude)
-            LatLabel.text = String(format: "%.4f", currentLocation.coordinate.latitude)  // format %.4f : 4 digits after dot
+            LatLabel.text = "Latitute:  " + String(format: "%.4f", currentLocation.coordinate.latitude)  // format %.4f : 4 digits after dot
+            LongLabel.text = "Longitude:  " + String(format: "%.4f", currentLocation.coordinate.longitude)
             render(currentLocation)
         }
         
