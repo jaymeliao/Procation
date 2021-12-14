@@ -9,7 +9,7 @@
 import UIKit
 import ContactsUI
 class SettingPageViewController: UIViewController, CNContactPickerDelegate {
-    public var mycompletionHandler: ((String?)->Void)?
+    public var mycompletionHandler: (([String]?)->Void)?
 
     @IBOutlet weak var ContactName1: UILabel!
     @IBOutlet weak var phoneNum1: UILabel!
@@ -22,7 +22,12 @@ class SettingPageViewController: UIViewController, CNContactPickerDelegate {
     }
     
     @IBAction func goBackButtonPressed(_ sender: UIButton) {
-        mycompletionHandler?(ContactName1.text)
+        //mycompletionHandler?(ContactName1.text)
+        //mycompletionHandler?(phoneNum1.text )
+    
+        //print(type(of: ContactName1.text)) // optional string
+        //print(type(of: ContactName1.text!)) //string
+        mycompletionHandler?([ContactName1.text!,phoneNum1.text!])
         dismiss(animated: true, completion: nil)
     }
     
@@ -49,20 +54,9 @@ class SettingPageViewController: UIViewController, CNContactPickerDelegate {
         let phoneValue = phone.value.stringValue
         
         phoneLabel1.text = phoneLabel
-        phoneNum1.text = phoneValue
+        phoneNum1.text = String(phoneValue)
         //print("\(phoneLabel):\(phoneValue)")
        // testLabel.text = lastName + firstName
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

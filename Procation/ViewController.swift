@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import Contacts
 class ViewController: UIViewController {
     @IBOutlet weak var LatLabel: UILabel!
     @IBOutlet weak var LongLabel: UILabel!
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
     
     //Text on Contact btns
     @IBOutlet weak var ContactBtnOneName: UIButton!
+    var contact1phoneNum = "123-456-789"
 
     //===========================
     
@@ -44,7 +46,11 @@ class ViewController: UIViewController {
        
         vc.mycompletionHandler = { text in
             //self.ContactName1.text=text
-            self.ContactBtnOneName.setTitle(text, for: .normal)
+            //print(type(of:text))
+            //print(text![0])
+            //print(text![1])
+            self.ContactBtnOneName.setTitle(text![0], for: .normal)
+            self.contact1phoneNum = text![1]
         }
         present(vc,animated: true)
         
@@ -55,11 +61,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func callContact1(_ sender: UIButton) {
-        
-
-        callNumber(phoneNumber: "7788065724")
-        
-        
+        //print("call the num now")
+        //print(contact1phoneNum)
+        callNumber(phoneNumber: contact1phoneNum)
+        //callNumber(phoneNumber: "7788065724")
     }
     
     
